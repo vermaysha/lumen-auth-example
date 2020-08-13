@@ -40,16 +40,8 @@ class AuthController extends Controller
             'password' => Hash::make($request->password)
         ]))->save();
 
-        // $user = User::where('email', $request->email)->first();
-        // $tokenResult = $user->createToken('User Token for ' . $user->name);
-        // $token = $tokenResult->token;
-        // $token->save();
-
         return response([
-            'message' => 'Successfully created user!',
-            // 'access_token' => $tokenResult->accessToken,
-            // 'token_type' => 'Bearer',
-            // 'expires_at' => Carbon::parse($tokenResult->token->expires_at)->toDateTimeString()
+            'message' => 'Successfully created user!'
         ], 201);
     }
 
@@ -58,7 +50,7 @@ class AuthController extends Controller
      *
      * @param  [string] email
      * @param  [string] password
-     * @param  [boolean] remember_me
+     *
      * @return [string] access_token
      * @return [string] token_type
      * @return [string] expires_at

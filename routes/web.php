@@ -54,4 +54,3 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
     });
 });
 
-// $router->post('/register', 'UsersController@register');
